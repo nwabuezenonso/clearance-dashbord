@@ -81,7 +81,7 @@ const ClearanceCompletionMessage = ({ onClose }: any) => {
           <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
             <li>Check your university email for your graduation ceremony details</li>
             <li>Download your clearance certificate from the documents section</li>
-            <li>Contact the registrar's office to confirm your certificate collection date</li>
+            <li>Contact the registrar&apos;s office to confirm your certificate collection date</li>
           </ul>
         </div>
         <div className="flex justify-center">

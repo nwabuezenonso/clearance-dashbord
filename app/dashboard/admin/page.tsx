@@ -69,27 +69,26 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [expandedStudent, setExpandedStudent] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [showConfirmation, setShowConfirmation] = useState(false);
-  const [selectedStudentId, setSelectedStudentId] = useState(null);
-  const [action, setAction] = useState("");
+  // const [selectedStudentId, setSelectedStudentId] = useState(null);
+  // const [action, setAction] = useState("");
 
   const handleStudentExpand = (id: any) => {
     setExpandedStudent(expandedStudent === id ? null : id);
   };
 
   const handleApproveReject = (id: any, actionType: any) => {
-    setSelectedStudentId(id);
-    setAction(actionType);
-    setShowConfirmation(true);
+    // setSelectedStudentId(id);
+    console.log(id);
+    console.log(actionType);
+    // setAction(actionType);
   };
 
-  const confirmAction = () => {
-    // In a real application, this would call an API to update the database
-    console.log(
-      `${action === "approve" ? "Approved" : "Rejected"} student ID: ${selectedStudentId}`
-    );
-    setShowConfirmation(false);
-  };
+  // const confirmAction = () => {
+  //   // In a real application, this would call an API to update the database
+  //   console.log(
+  //     `${action === "approve" ? "Approved" : "Rejected"} student ID: ${selectedStudentId}`
+  //   );
+  // };
 
   const filteredClearances = pendingClearances.filter(
     (student) =>
@@ -593,7 +592,7 @@ export default function AdminDashboard() {
                   <div className="border rounded-lg p-4 hover:border-blue-500 cursor-pointer">
                     <h4 className="font-medium mb-2">Clearance Status Report</h4>
                     <p className="text-sm text-gray-500 mb-4">
-                      Generate a detailed report of all students' clearance status
+                      Generate a detailed report of all student&apos;s clearance status
                     </p>
                     <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                       Generate Report
